@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Sistema de Inscripcion</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark"
+      style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+      <h1 class="text-center text-white ms-2">Sistema de Inscripcion</h1>
+    </nav>
+  </header>
+  <main class="bg-light">
+    <!-- breadcrumb -->
+    <div class="container row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active text-white " id="breadHome" aria-current="page"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active text-white " id="breadSelect" aria-current="page"><a href="#">Seleccion de
+              Materias</a></li>
+          <li class="breadcrumb-item active text-white " id="breadConfirm" aria-current="page"><a
+              href="#">Confirmacion</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!-- form container -->
+    <div class="container" id="form-container">
+      <div class="row">
+        <h3 class="text-center mt-2 mb-3">
+          <i class="bi bi-person-lines-fill"></i> Personal Information
+        </h3>
+        <!-- left -->
+        <div class="col-md-6">
+          <div class="form-group mb-3">
+            <label class="form-label h5" for="nameField">Nombre</label>
+            <input type="text" id="nameField" class="form-control" placeholder="Enter your Name" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label h5" for="stateField">Provincia</label>
+            <input type="text" id="stateField" class="form-control" placeholder="Enter your state" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label h5" for="cityField">Ciudad</label>
+            <input type="text" id="cityField" class="form-control" placeholder="Enter your city" />
+          </div>
+        </div>
+        <!-- right -->
+        <div class="col-md-6">
+          <div class="form-group mb-3">
+            <label class="form-label h5" for="sectorField">Sector</label>
+            <input type="text" id="sectorField" class="form-control" placeholder="Enter your sector" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label h5" for="streetField">Calle</label>
+            <input type="text" id="streetField" class="form-control" placeholder="Enter your street" />
+          </div>
+          <div class="form-group mb-xxl-2">
+            <label class="form-label h5" for="nameField">Carrera</label>
+            <select type="text" id="carrerField" class="form-select" aria-label=".form-select-lg example" />
+            <option selected>Seleccione una carrera...</option>
+            <option value="1">Software</option>
+            <option value="2">Multimedia</option>
+            <option value="3">Ciberseguridad</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="container  mt-4 mb-3 row ">
+        <div class="text-end col">
+          <button type="submit" class="btn btn-primary btn-dark btn-lg " id="btnClearForm">Limpiar <i
+              class="bi bi-trash3-fill"></i>
+          </button>
+        </div>
+        <div class="text-end col">
+          <button type="submit" class="btn btn-primary btn-dark btn-lg " id="btnNextForm">Siguiente <i
+              class="bi bi-arrow-right-circle"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Select Class  -->
+    <div class="container display-None" id="select-form-container">
+      <!-- colapse para las materias -->
+      <div class="row align-items-center">
+        <h3 class="text-center mb-3 mt-2">Seleccion de Materia</h3>
+        <div class="col-md-11 mx-auto">
+          <!-- Acordions -->
+          <div class="accordion " id="accordionExample">
+            <!-- 1st accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <span id="firstClassName"></span>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="row align-items-center">
+
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="primeraClase" id="lunSelectFirst">
+                      <label class="form-check-label" for="primeraClase">
+                        lunes 8:00 - 12:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="primeraClase" id="marSelectFirst">
+                      <label class="form-check-label" for="primeraClase">
+                        martes 14:00 - 17:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="primeraClase" id="vierSelectFirst">
+                      <label class="form-check-label" for="primeraClase">
+                        viernes 18:00 - 21:59
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2nd accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span id="secondClassName"></span>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+
+
+                  <div class="row align-items-center">
+
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="segundaClase" id="mierSelectSecond">
+                      <label class="form-check-label" for="segundaClase">
+                        mier 8:00 - 12:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="segundaClase" id="jueSelectSecond">
+                      <label class="form-check-label" for="segundaClase">
+                        jue 14:00 - 17:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="segundaClase" id="sabSelectSecond">
+                      <label class="form-check-label" for="segundaClase">
+                        sab 18:00 - 21:59
+                      </label>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 3rd accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span id="thirdClassName"></span>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="row align-items-center">
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="terceraClase" id="lunSelectThird">
+                      <label class="form-check-label" for="terceraClase">
+                        lunes 8:00 - 12:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="terceraClase" id="marSelectThird">
+                      <label class="form-check-label" for="terceraClase">
+                        martes 14:00 - 17:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="terceraClase" id="vierSelectThird">
+                      <label class="form-check-label" for="terceraClase">
+                        viernes 18:00 - 21:59
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- 4th accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <span id="fourthClassName"></span>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="row align-items-center">
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="cuartaClase" id="mierSelectFourth">
+                      <label class="form-check-label" for="cuartaClase">
+                        mier 8:00 - 12:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="cuartaClase" id="jueSelectFourth">
+                      <label class="form-check-label" for="cuartaClase">
+                        jue 14:00 - 17:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="cuartaClase" id="sabSelectFourth">
+                      <label class="form-check-label" for="cuartaClase">
+                        sab 18:00 - 21:59
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- 5th accordion -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <span id="fifthClassName"></span>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="row align-items-center">
+
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="quintaClase" id="lunSelectFifth">
+                      <label class="form-check-label" for="quintaClase">
+                        lunes 8:00 - 12:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="quintaClase" id="marSelectFifth">
+                      <label class="form-check-label" for="quintaClase">
+                        martes 14:00 - 17:59
+                      </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                      <input class="form-check-input" type="radio" name="quintaClase" id="vierSelectFifth">
+                      <label class="form-check-label" for="quintaClase">
+                        viernes 18:00 - 21:59
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- end accordions -->
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container  mt-4 mb-3 ">
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary btn-dark btn-lg " id="btnNextSelect">Siguiente <i
+              class="bi bi-arrow-right-circle"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Confinrmacion  -->
+    <div class="container display-None" id="schedule-container">
+
+      <div class="col mb-4 mx-auto">
+        <!-- information card -->
+        <div class="card " style="max-width: 70rem;">
+          <div class="card-header bg-dark text-white text-center h5">
+            Informacion
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><span class="h6" id="dataName"></span>
+              </li>
+              <li class="list-group-item"><span class="h6" id="dataState"></span>
+              </li>
+              <li class="list-group-item"><span class="h6" id="dataCity"></span>
+              </li>
+              <li class="list-group-item"><span class="h6" id="dataSector"></span>
+              </li>
+              <li class="list-group-item"><span class="h6" id="dataStreet"></span>
+              </li>
+              <li class="list-group-item"><span class="h6" id="dataCarrer"></span>
+              </li>
+            </ul>
+            <!-- Table -->
+            <div class="mx-auto">
+              <table class="table table-dark table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Materia</th>
+                    <th scope="col">Lunes</th>
+                    <th scope="col">Martes</th>
+                    <th scope="col">Miercoles</th>
+                    <th scope="col">Jueves</th>
+                    <th scope="col">Viernes</th>
+                    <th scope="col">Sabados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><span id="firstClass"></span></th>
+                    <td id="firstLunes"></td>
+                    <td id="firstMartes"></td>
+                    <td></td>
+                    <td></td>
+                    <td id="firstViernes"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span id="secondClass"></span></th>
+                    <td></td>
+                    <td></td>
+                    <td id="secondMiercoles"></td>
+                    <td id="secondJueves"></td>
+                    <td></td>
+                    <td id="secondSabado"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span id="thirdClass"></span></th>
+                    <td id="thirdLunes"></td>
+                    <td id="thirdMartes"></td>
+                    <td></td>
+                    <td></td>
+                    <td id="thirdViernes"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span id="fourthClass"></span></th>
+                    <td></td>
+                    <td></td>
+                    <td id="fourthMiercoles"></td>
+                    <td id="fourthJueves"></td>
+                    <td></td>
+                    <td id="fourthSabado"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span id="fifthClass"></span></th>
+                    <td id="fifthLunes"></td>
+                    <td id="fifthMartes"></td>
+                    <td></td>
+                    <td></td>
+                    <td id="fifthViernes"></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="assets/lib/jquery/jquery.min.js"></script>
+  <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/indexJquery.Js"></script>
+  <footer></footer>
+</body>
+
+</html>
